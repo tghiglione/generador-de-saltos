@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.22)
-project(AyED_TP1_1c2024)
+project(AyED_TP2_1c2024)
 
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "../")
@@ -10,9 +10,14 @@ include_directories(include)
 
 # Si crean otros archivos .cpp, los tienen que agregar acá de la forma:
 #   "directorio/archivo.cpp"
-set(ARCHIVOS_FUENTE "src/Herta.cpp")
+set(ARCHIVOS_FUENTE
+        "include/Vector.hpp"
+        "src/Gacha.cpp"
+        "src/Salto.cpp"
+        "src/GeneradorSalto.cpp"
+        "src/Recompensa.cpp")
 
-add_executable(AyED_TP1_1c2024
+add_executable(AyED_TP2_1c2024
         ${ARCHIVOS_FUENTE}
         main.cpp
 )

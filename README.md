@@ -1,4 +1,4 @@
-# AyED / AYP2 - TP1 1c2024
+# AyED / AYP2 - TP2 1c2024
 
 <p align="center">
    <img src="Banner.jpg" alt="TP1: Los mensajes de Herta"><br>

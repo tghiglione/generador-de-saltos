@@ -13,7 +13,8 @@ FetchContent_MakeAvailable(googletest)
 include_directories(${gmock_SOURCE_DIR}/include ${gmock_SOURCE_DIR})
 
 add_executable(TPTests
-        HertaTest.cpp
+        VectorTest.cpp
+        GachaTest.cpp
 )
 
 target_link_libraries(
