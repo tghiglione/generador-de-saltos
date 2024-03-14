@@ -36,13 +36,21 @@ private:
     static const std::vector<Recompensa> RECOMPENSAS_CUATRO_ESTRELLAS;
     static const std::vector<Recompensa> RECOMPENSAS_TRES_ESTRELLAS;
 
+    // Pre: Recompensas no puede estar vacío.
+    // Post: Devuelve una recompensa elegida al azar.
     static Recompensa elegir_recompensa_aleatoria(std::vector<Recompensa> recompensas);
 
 public:
+    // Pre: -
+    // Post: Genera y devuelve un Salto aleatorio de 5 estrellas.
     static Salto generar_salto_5_estrellas();
 
+    // Pre: -
+    // Post: Genera y devuelve un Salto aleatorio de 4 estrellas.
     static Salto generar_salto_4_estrellas();
 
+    // Pre: -
+    // Post: Genera y devuelve un Salto aleatorio de 3 estrellas.
     static Salto generar_salto_3_estrellas();
 };
 

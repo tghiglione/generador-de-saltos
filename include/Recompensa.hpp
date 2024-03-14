@@ -14,10 +14,14 @@ private:
     int elemento{};
     int via{};
 public:
+    // Constructor default.
     Recompensa() = default;
 
+    // Constructor.
     Recompensa(std::string nombre, int tipo, int elemento, int via);
 
+    // Pre: -
+    // Post: Carga la información al stream de salida.
     friend std::ostream& operator<<(std::ostream& os, const Recompensa& recompensa);
 };
 

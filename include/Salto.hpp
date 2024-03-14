@@ -14,12 +14,18 @@ private:
     Rareza rareza{};
     Recompensa recompensa;
 public:
+    // Constructor default.
     Salto() = default;
 
+    // Constructor.
     Salto(Rareza rareza, Recompensa recompensa);
 
+    // Pre: -
+    // Post: Devuelve la rareza del Salto.
     Rareza obtener_rareza();
 
+    // Pre: -
+    // Post: Carga la información al stream de salida.
     friend std::ostream& operator<<(std::ostream& os, const Salto& salto);
 };
 
