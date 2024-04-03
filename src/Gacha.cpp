@@ -1,6 +1,10 @@
 #include "Gacha.hpp"
 #include "GeneradorSalto.hpp"
 
+Gacha::Gacha() {
+
+}
+
 Salto Gacha::generar_salto() {
     return Salto();
 }

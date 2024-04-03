@@ -4,6 +4,8 @@
    <img src="Banner.jpg" alt="TP1: Los mensajes de Herta"><br>
 </p>
 
+### Estudiante: APELLIDO, NOMBRE - PADRÓN
+
 El proyecto se puede compilar manualmente por terminal con la siguiente línea:
 
 > // COMPLETAR CON LINEA DE COMPILACIÓN //

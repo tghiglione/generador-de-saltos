@@ -6,6 +6,8 @@
 
 class Gacha {
 public:
+    Gacha();
+
     Salto generar_salto();
 
     Vector<Salto> generar_salto_multiple();
