@@ -24,6 +24,20 @@ add_executable(AyED_TP2_1c2024
 
 set_target_properties(${PROJECT_NAME} PROPERTIES OUTPUT_NAME "main")
 
-add_subdirectory(tests)
+include(FetchContent)
+FetchContent_Declare(
+        googletest
+        GIT_REPOSITORY https://github.com/google/googletest.git
+        GIT_TAG e4fdb87e76b9fc4b01c54ad81aea19d6e994b994
+)
 
-target_sources(TPTests PRIVATE ${ARCHIVOS_FUENTE})
+set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+FetchContent_MakeAvailable(googletest)
+
+include_directories(${gmock_SOURCE_DIR}/include ${gmock_SOURCE_DIR})
+
+add_subdirectory(tests/gacha)
+add_subdirectory(tests/vector)
+
+target_sources(GachaTest PRIVATE ${ARCHIVOS_FUENTE})
+target_sources(VectorTest PRIVATE ${ARCHIVOS_FUENTE})

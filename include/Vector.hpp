@@ -80,27 +80,27 @@ void Vector<T>::alta(T dato) {
 
 template<typename T>
 T Vector<T>::baja(size_t indice) {
-    return nullptr;
+
 }
 
 template<typename T>
 T Vector<T>::baja() {
-    return nullptr;
+
 }
 
 template<typename T>
 bool Vector<T>::vacio() {
-    return false;
+
 }
 
 template<typename T>
 size_t Vector<T>::tamanio() {
-    return 0;
+
 }
 
 template<typename T>
 T& Vector<T>::operator[](size_t indice) {
-    return <#initializer#>;
+
 }
 
 template<typename T>
@@ -108,6 +108,7 @@ Vector<T>::~Vector() {
 
 }
 
+// Estos dos métodos ya están implementados. No hace falta modificarlos.
 template<typename T>
 Vector<T>::Vector(const Vector& vector) {
     datos = nullptr;
