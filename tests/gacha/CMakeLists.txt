@@ -1,13 +1,13 @@
-project(GachaTest)
+project(gacha_test)
 
-add_executable(GachaTest
-        GachaTest.cpp
+add_executable(gacha_test
+        gacha_test.cpp
 )
 
 target_link_libraries(
-        GachaTest
+        gacha_test
         GTest::gtest_main
 )
 
 include(GoogleTest)
-gtest_discover_tests(GachaTest)
+gtest_discover_tests(gacha_test)

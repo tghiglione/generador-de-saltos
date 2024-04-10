@@ -5,7 +5,7 @@
 #include <exception>
 
 class VectorException : public std::exception {
-    // Excepción especifica y exclusiva para errores dentro del Vector.
+    // Excepción especifica y exclusiva para errores dentro del vector.
     // Usar de la forma "throw VectorException();" cuando una precondición no se cumpla.
 
     // Ejemplo:
@@ -15,7 +15,7 @@ class VectorException : public std::exception {
 };
 
 template<typename T>
-class Vector {
+class vector {
 private:
     T* datos;
     size_t cantidad_datos;
@@ -23,7 +23,7 @@ private:
     size_t tamanio_maximo;
 public:
     // Constructor.
-    Vector();
+    vector();
 
     // Pre: El índice debe ser menor o igual que la cantidad de datos.
     // Post: Agrega el dato antes del dato en la posición indicada, moviendo todos los elementos siguientes.
@@ -54,63 +54,63 @@ public:
     T& operator[](size_t indice);
 
     // Constructor de copia (ya implementado).
-    Vector(const Vector<T>& vector);
+    vector(const vector<T>& vector);
 
     // Operador de asignación (ya implementado).
-    Vector<T>& operator=(const Vector<T>& vector);
+    vector<T>& operator=(const vector<T>& vector);
 
     // Destructor.
-    ~Vector();
+    ~vector();
 };
 
 template<typename T>
-Vector<T>::Vector() {
+vector<T>::vector() {
 
 }
 
 template<typename T>
-void Vector<T>::alta(T dato, size_t indice) {
+void vector<T>::alta(T dato, size_t indice) {
 
 }
 
 template<typename T>
-void Vector<T>::alta(T dato) {
+void vector<T>::alta(T dato) {
 
 }
 
 template<typename T>
-T Vector<T>::baja(size_t indice) {
+T vector<T>::baja(size_t indice) {
 
 }
 
 template<typename T>
-T Vector<T>::baja() {
+T vector<T>::baja() {
 
 }
 
 template<typename T>
-bool Vector<T>::vacio() {
+bool vector<T>::vacio() {
 
 }
 
 template<typename T>
-size_t Vector<T>::tamanio() {
+size_t vector<T>::tamanio() {
 
 }
 
 template<typename T>
-T& Vector<T>::operator[](size_t indice) {
+T& vector<T>::operator[](size_t indice) {
 
 }
 
 template<typename T>
-Vector<T>::~Vector() {
+vector<T>::~vector() {
 
 }
 
 // Estos dos métodos ya están implementados. No hace falta modificarlos.
 template<typename T>
-Vector<T>::Vector(const Vector& vector) {
+vector<T>::vector(const vector& vector) {
     datos = nullptr;
     cantidad_datos = vector.cantidad_datos;
     tamanio_maximo = vector.tamanio_maximo;
@@ -123,7 +123,7 @@ Vector<T>::Vector(const Vector& vector) {
 }
 
 template<typename T>
-Vector<T>& Vector<T>::operator=(const Vector& vector) {
+vector<T>& vector<T>::operator=(const vector& vector) {
     if (this != &vector) {
         delete[] datos;
         datos = nullptr;

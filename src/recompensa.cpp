@@ -1,7 +1,7 @@
-#include "Recompensa.hpp"
+#include "recompensa.hpp"
 #include <ostream>
 
-const std::string Recompensa::ELEMENTOS[8] = {"Viento",
+const std::string recompensa::ELEMENTOS[8] = {"Viento",
                                               "Fuego",
                                               "Electrico",
                                               "Cuantico",
@@ -10,7 +10,7 @@ const std::string Recompensa::ELEMENTOS[8] = {"Viento",
                                               "Hielo",
                                               "N/A"};
 
-const std::string Recompensa::VIAS[7] = {"Nihilidad",
+const std::string recompensa::VIAS[7] = {"Nihilidad",
                                          "Destruccion",
                                          "Abundancia",
                                          "Erudicion",
@@ -18,20 +18,20 @@ const std::string Recompensa::VIAS[7] = {"Nihilidad",
                                          "Conservacion",
                                          "Armonia"};
 
-const std::string Recompensa::TIPOS[2] = {"Personaje",
+const std::string recompensa::TIPOS[2] = {"Personaje",
                                           "Cono de Luz"};
 
-Recompensa::Recompensa(std::string nombre, int tipo, int elemento, int via) {
+recompensa::recompensa(std::string nombre, int tipo, int elemento, int via) {
     this->nombre = std::move(nombre);
     this->tipo = tipo;
     this->elemento = elemento;
     this->via = via;
 }
 
-std::ostream& operator<<(std::ostream& os, const Recompensa& recompensa) {
+std::ostream& operator<<(std::ostream& os, const recompensa& recompensa) {
     os << recompensa.nombre << ','
-       << Recompensa::TIPOS[recompensa.tipo] << ','
-       << Recompensa::ELEMENTOS[recompensa.elemento] << ','
-       << Recompensa::VIAS[recompensa.via];
+       << recompensa::TIPOS[recompensa.tipo] << ','
+       << recompensa::ELEMENTOS[recompensa.elemento] << ','
+       << recompensa::VIAS[recompensa.via];
     return os;
 }

@@ -1,7 +1,7 @@
 # AyED / AYP2 - TP2 1c2024
 
 <p align="center">
-   <img src="Banner.jpg" alt="TP1: Los mensajes de Herta"><br>
+   <img src="Banner.jpg" alt="TP2: Los Saltos"><br>
 </p>
 
 ### Estudiante: APELLIDO, NOMBRE - PADRÓN

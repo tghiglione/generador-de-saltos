@@ -3,7 +3,7 @@
 
 #include <string>
 
-class Recompensa {
+class recompensa {
 private:
     static const std::string ELEMENTOS[8];
     static const std::string VIAS[7];
@@ -15,14 +15,14 @@ private:
     int via{};
 public:
     // Constructor default.
-    Recompensa() = default;
+    recompensa() = default;
 
     // Constructor.
-    Recompensa(std::string nombre, int tipo, int elemento, int via);
+    recompensa(std::string nombre, int tipo, int elemento, int via);
 
     // Pre: -
     // Post: Carga la información al stream de salida.
-    friend std::ostream& operator<<(std::ostream& os, const Recompensa& recompensa);
+    friend std::ostream& operator<<(std::ostream& os, const recompensa& recompensa);
 };
 
 #endif

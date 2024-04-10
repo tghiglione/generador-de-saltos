@@ -11,11 +11,11 @@ include_directories(include)
 # Si crean otros archivos .cpp, los tienen que agregar acá de la forma:
 #   "directorio/archivo.cpp"
 set(ARCHIVOS_FUENTE
-        "include/Vector.hpp"
-        "src/Gacha.cpp"
-        "src/Salto.cpp"
-        "src/GeneradorSalto.cpp"
-        "src/Recompensa.cpp")
+        "include/vector.hpp"
+        "src/gacha.cpp"
+        "src/salto.cpp"
+        "src/generador_salto.cpp"
+        "src/recompensa.cpp")
 
 add_executable(AyED_TP2_1c2024
         ${ARCHIVOS_FUENTE}
@@ -39,5 +39,5 @@ include_directories(${gmock_SOURCE_DIR}/include ${gmock_SOURCE_DIR})
 add_subdirectory(tests/gacha)
 add_subdirectory(tests/vector)
 
-target_sources(GachaTest PRIVATE ${ARCHIVOS_FUENTE})
-target_sources(VectorTest PRIVATE ${ARCHIVOS_FUENTE})
+target_sources(gacha_test PRIVATE ${ARCHIVOS_FUENTE})
+target_sources(vector_test PRIVATE ${ARCHIVOS_FUENTE})

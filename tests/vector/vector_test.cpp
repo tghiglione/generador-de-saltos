@@ -1,13 +1,13 @@
 #include "gtest/gtest.h"
-#include "Vector.hpp"
+#include "vector.hpp"
 
-class VectorTest : public ::testing::Test {
+class vector_test : public ::testing::Test {
 protected:
-    Vector<int> vector{};
+    vector<int> vector{};
     int dato{};
 };
 
-TEST_F(VectorTest, Alta) {
+TEST_F(vector_test, Alta) {
     vector.alta(1);
     EXPECT_EQ(vector[0], 1);
 
@@ -18,7 +18,7 @@ TEST_F(VectorTest, Alta) {
     EXPECT_EQ(vector[2], 3);
 }
 
-TEST_F(VectorTest, AltaIndice) {
+TEST_F(vector_test, AltaIndice) {
     vector.alta(1, 0);
     EXPECT_EQ(vector[0], 1);
 
@@ -32,14 +32,14 @@ TEST_F(VectorTest, AltaIndice) {
     EXPECT_EQ(vector[3], 4);
 }
 
-TEST_F(VectorTest, AltaIndiceManejaIndiceMayorACantidadDeDatos) {
+TEST_F(vector_test, AltaIndiceManejaIndiceMayorACantidadDeDatos) {
     EXPECT_THROW(vector.alta(1, 1), VectorException);
 
     vector.alta(1);
     EXPECT_THROW(vector.alta(2, 2), VectorException);
 }
 
-TEST_F(VectorTest, OperadorAcceso) {
+TEST_F(vector_test, OperadorAcceso) {
     vector.alta(1);
     vector.alta(2, 0);
     vector.alta(3);
@@ -49,11 +49,11 @@ TEST_F(VectorTest, OperadorAcceso) {
     EXPECT_EQ(vector[2], 3);
 }
 
-TEST_F(VectorTest, OperadorAccesoManejaVectorVacio) {
+TEST_F(vector_test, OperadorAccesoManejaVectorVacio) {
     EXPECT_THROW(vector[0], VectorException);
 }
 
-TEST_F(VectorTest, OperadorAccesoManejaIndiceMayorOIgualACantidadDeDatos) {
+TEST_F(vector_test, OperadorAccesoManejaIndiceMayorOIgualACantidadDeDatos) {
     vector.alta(1);
 
     EXPECT_NO_THROW(vector[0]);
@@ -61,7 +61,7 @@ TEST_F(VectorTest, OperadorAccesoManejaIndiceMayorOIgualACantidadDeDatos) {
     EXPECT_THROW(vector[2], VectorException);
 }
 
-TEST_F(VectorTest, Baja) {
+TEST_F(vector_test, Baja) {
     vector.alta(1);
     vector.alta(2);
 
@@ -72,7 +72,7 @@ TEST_F(VectorTest, Baja) {
     EXPECT_EQ(dato, 1);
 }
 
-TEST_F(VectorTest, BajaIndice) {
+TEST_F(vector_test, BajaIndice) {
     vector.alta(1);
     vector.alta(2);
     vector.alta(3);
@@ -91,23 +91,23 @@ TEST_F(VectorTest, BajaIndice) {
     EXPECT_EQ(dato, 3);
 }
 
-TEST_F(VectorTest, BajaManejaVectorVacio) {
+TEST_F(vector_test, BajaManejaVectorVacio) {
     EXPECT_THROW(vector.baja(), VectorException);
 }
 
 
-TEST_F(VectorTest, BajaIndiceManejaVectorVacio) {
+TEST_F(vector_test, BajaIndiceManejaVectorVacio) {
     EXPECT_THROW(vector.baja(0), VectorException);
 }
 
-TEST_F(VectorTest, BajaIndiceManejaIndiceMayorOIgualACantidadDeDatos) {
+TEST_F(vector_test, BajaIndiceManejaIndiceMayorOIgualACantidadDeDatos) {
     vector.alta(1);
     EXPECT_THROW(vector.baja(1), VectorException);
     EXPECT_THROW(vector.baja(2), VectorException);
     EXPECT_NO_THROW(vector.baja(0));
 }
 
-TEST_F(VectorTest, Vacio) {
+TEST_F(vector_test, Vacio) {
     EXPECT_TRUE(vector.vacio());
 
     vector.alta(1);
@@ -117,7 +117,7 @@ TEST_F(VectorTest, Vacio) {
     EXPECT_TRUE(vector.vacio());
 }
 
-TEST_F(VectorTest, Tamanio) {
+TEST_F(vector_test, Tamanio) {
     EXPECT_EQ(vector.tamanio(), 0);
 
     vector.alta(1);

@@ -1,7 +1,7 @@
-#include "GeneradorSalto.hpp"
+#include "generador_salto.hpp"
 #include <random>
 
-const std::vector<Recompensa> GeneradorSalto::RECOMPENSAS_CINCO_ESTRELLAS = {
+const std::vector<recompensa> generador_salto::RECOMPENSAS_CINCO_ESTRELLAS = {
         {"Black Swan",                 PERSONAJE, VIENTO,     NIHILIDAD},
         {"Sparkle",                    PERSONAJE, CUANTICO,   ARMONIA},
         {"Argenti",                    PERSONAJE, FISICO,     ERUDICION},
@@ -27,7 +27,7 @@ const std::vector<Recompensa> GeneradorSalto::RECOMPENSAS_CINCO_ESTRELLAS = {
         {"Yanqing",                    PERSONAJE, HIELO,      CACERIA},
 };
 
-const std::vector<Recompensa> GeneradorSalto::RECOMPENSAS_CUATRO_ESTRELLAS = {
+const std::vector<recompensa> generador_salto::RECOMPENSAS_CUATRO_ESTRELLAS = {
         {"Misha",     PERSONAJE, HIELO,      DESTRUCCION},
         {"Arlan",     PERSONAJE, ELECTRICO,  DESTRUCCION},
         {"Asta",      PERSONAJE, FUEGO,      ARMONIA},
@@ -50,7 +50,7 @@ const std::vector<Recompensa> GeneradorSalto::RECOMPENSAS_CUATRO_ESTRELLAS = {
         {"Yukong",    PERSONAJE, IMAGINARIO, ARMONIA},
 };
 
-const std::vector<Recompensa> GeneradorSalto::RECOMPENSAS_TRES_ESTRELLAS = {
+const std::vector<recompensa> generador_salto::RECOMPENSAS_TRES_ESTRELLAS = {
         {"Antagonista",      CONO_DE_LUZ, SIN_ELEMENTO, CACERIA},
         {"Archivos",         CONO_DE_LUZ, SIN_ELEMENTO, ERUDICION},
         {"Blindaje",         CONO_DE_LUZ, SIN_ELEMENTO, CONSERVACION},
@@ -74,21 +74,21 @@ const std::vector<Recompensa> GeneradorSalto::RECOMPENSAS_TRES_ESTRELLAS = {
         {"Ambar",            CONO_DE_LUZ, SIN_ELEMENTO, CONSERVACION},
 };
 
-Recompensa GeneradorSalto::elegir_recompensa_aleatoria(std::vector<Recompensa> recompensas) {
+recompensa generador_salto::elegir_recompensa_aleatoria(std::vector<recompensa> recompensas) {
     std::random_device rd;
     std::mt19937 gen(rd());
     std::uniform_int_distribution<> dist(0, (int) recompensas.size() - 1);
     return recompensas[(size_t) dist(gen)];
 }
 
-Salto GeneradorSalto::generar_salto_5_estrellas() {
+salto generador_salto::generar_salto_5_estrellas() {
     return {CINCO_ESTRELLAS, elegir_recompensa_aleatoria(RECOMPENSAS_CINCO_ESTRELLAS)};
 }
 
-Salto GeneradorSalto::generar_salto_4_estrellas() {
+salto generador_salto::generar_salto_4_estrellas() {
     return {CUATRO_ESTRELLAS, elegir_recompensa_aleatoria(RECOMPENSAS_CUATRO_ESTRELLAS)};
 }
 
-Salto GeneradorSalto::generar_salto_3_estrellas() {
+salto generador_salto::generar_salto_3_estrellas() {
     return {TRES_ESTRELLAS, elegir_recompensa_aleatoria(RECOMPENSAS_TRES_ESTRELLAS)};
 }
