@@ -34,11 +34,11 @@ public:
     void alta(T dato);
 
     // Pre: El vector no puede estar vacío. El índice debe ser menor que la cantidad de datos.
-    // Post: Elimina el dato en la posición indicada, moviendo todos los elementos siguientes.
+    // Post: Elimina el dato en la posición indicada, moviendo todos los elementos siguientes, y lo devuelve.
     T baja(size_t indice);
 
     // Pre: El vector no puede estar vacío.
-    // Post: Elimina el ultimo dato. Equivale a baja(cantidad_datos - 1).
+    // Post: Elimina el ultimo dato y lo devuelve. Equivale a baja(cantidad_datos - 1).
     T baja();
 
     // Pre: -
