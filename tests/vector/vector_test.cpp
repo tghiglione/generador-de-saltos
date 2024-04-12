@@ -33,10 +33,10 @@ TEST_F(vector_test, AltaIndice) {
 }
 
 TEST_F(vector_test, AltaIndiceManejaIndiceMayorACantidadDeDatos) {
-    EXPECT_THROW(vector.alta(1, 1), VectorException);
+    EXPECT_THROW(vector.alta(1, 1), vector_exception);
 
     vector.alta(1);
-    EXPECT_THROW(vector.alta(2, 2), VectorException);
+    EXPECT_THROW(vector.alta(2, 2), vector_exception);
 }
 
 TEST_F(vector_test, OperadorAcceso) {
@@ -50,15 +50,15 @@ TEST_F(vector_test, OperadorAcceso) {
 }
 
 TEST_F(vector_test, OperadorAccesoManejaVectorVacio) {
-    EXPECT_THROW(vector[0], VectorException);
+    EXPECT_THROW(vector[0], vector_exception);
 }
 
 TEST_F(vector_test, OperadorAccesoManejaIndiceMayorOIgualACantidadDeDatos) {
     vector.alta(1);
 
     EXPECT_NO_THROW(vector[0]);
-    EXPECT_THROW(vector[1], VectorException);
-    EXPECT_THROW(vector[2], VectorException);
+    EXPECT_THROW(vector[1], vector_exception);
+    EXPECT_THROW(vector[2], vector_exception);
 }
 
 TEST_F(vector_test, Baja) {
@@ -92,18 +92,18 @@ TEST_F(vector_test, BajaIndice) {
 }
 
 TEST_F(vector_test, BajaManejaVectorVacio) {
-    EXPECT_THROW(vector.baja(), VectorException);
+    EXPECT_THROW(vector.baja(), vector_exception);
 }
 
 
 TEST_F(vector_test, BajaIndiceManejaVectorVacio) {
-    EXPECT_THROW(vector.baja(0), VectorException);
+    EXPECT_THROW(vector.baja(0), vector_exception);
 }
 
 TEST_F(vector_test, BajaIndiceManejaIndiceMayorOIgualACantidadDeDatos) {
     vector.alta(1);
-    EXPECT_THROW(vector.baja(1), VectorException);
-    EXPECT_THROW(vector.baja(2), VectorException);
+    EXPECT_THROW(vector.baja(1), vector_exception);
+    EXPECT_THROW(vector.baja(2), vector_exception);
     EXPECT_NO_THROW(vector.baja(0));
 }
 

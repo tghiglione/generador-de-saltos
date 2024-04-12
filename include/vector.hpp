@@ -4,13 +4,13 @@
 #include <cstddef>
 #include <exception>
 
-class VectorException : public std::exception {
+class vector_exception : public std::exception {
     // Excepción especifica y exclusiva para errores dentro del vector.
-    // Usar de la forma "throw VectorException();" cuando una precondición no se cumpla.
+    // Usar de la forma "throw vector_exception();" cuando una precondición no se cumpla.
 
     // Ejemplo:
     //     if (condición_de_error){
-    //         throw VectorException();
+    //         throw vector_exception();
     //     }
 };
 
