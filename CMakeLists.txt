@@ -15,7 +15,8 @@ set(ARCHIVOS_FUENTE
         "src/gacha.cpp"
         "src/salto.cpp"
         "src/generador_salto.cpp"
-        "src/recompensa.cpp")
+        "src/recompensa.cpp"
+        "src/menu.cpp")
 
 add_executable(AyED_TP2_1c2024
         ${ARCHIVOS_FUENTE}
